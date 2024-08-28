@@ -64,7 +64,7 @@ COPY --from=front-builder /builder/src/backend/base/static/richie /app/base/stat
 WORKDIR /app
 
 # Make sure .mo files are up-to-date
-RUN mkdir -p locale && python manage.py compilemessages
+# RUN mkdir -p locale && python manage.py compilemessages
 
 # Gunicorn
 RUN mkdir -p /usr/local/etc/gunicorn
